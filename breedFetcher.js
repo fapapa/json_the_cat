@@ -5,5 +5,9 @@ const query = process.argv[2];
 
 request(API_URL + query, (err, response, body) => {
   const data = JSON.parse(body);
-  console.log(data[0].description);
+  if (data.length > 0) {
+    console.log(data[0].description);
+  } else {
+    console.log(`Search for "${query}" returned no results.`);
+  }
 });
