@@ -15,4 +15,13 @@ describe('fetchBreedDescription', () => {
       done();
     });
   });
+
+  it('returns a "no results" error when there are no results for the query', (done) => {
+    fetchBreedDescription('sthsths', (err, desc) => {
+      assert.equal(err.message, 'No results found');
+      assert.equal(desc, null);
+
+      done();
+    });
+  });
 });
