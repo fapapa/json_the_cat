@@ -17,4 +17,4 @@ const fetchBreedDescription = (query, complete) => {
   });
 };
 
-module.exports = fetchBreedDescription;
+module.exports = { fetchBreedDescription };

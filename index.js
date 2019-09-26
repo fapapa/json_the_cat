@@ -1,4 +1,4 @@
-const fetchBreedDescription = require('./breedFetcher.js');
+const { fetchBreedDescription } = require('./breedFetcher.js');
 
 fetchBreedDescription(process.argv[2], (err, description) => {
   if (err && err.code === 'ENOTFOUND') {
